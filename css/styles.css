@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+}
+
+div.output{
+  display: none;
+}
+
+.center-block {
+  float: none;
+}
