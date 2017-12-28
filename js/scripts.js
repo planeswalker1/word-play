@@ -12,4 +12,14 @@ $('form#sentence').submit(function(event) {
   // A variable that contains the splitted sentence input
   let inputWords = $('input#input').val().split(re);
   console.log('inputWords array: ', inputWords);
+
+  //An array that contains only words of a specific word length
+  let specificWords = inputWords.filter(word => word.length >= 3);
+  console.log('specificWords array: ', specificWords);
+
+  // A mapped array of specificWords that are lowercased
+  let lowerCaseWords = specificWords.map(function(word) {
+    return  word.toLowerCase();
+  });
+  console.log('lowerCaseWords array: ', lowerCaseWords);
 });
