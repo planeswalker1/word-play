@@ -1,5 +1,10 @@
 // Business (or back-end) logic:
 
+// A Function to capitalize a string
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 // User interface (or front-end) logic:
 
 // The submit event listener for form#sentence
@@ -22,4 +27,12 @@ $('form#sentence').submit(function(event) {
     return  word.toLowerCase();
   });
   console.log('lowerCaseWords array: ', lowerCaseWords);
+
+  // Capitalize lowerCaseWords array last item
+  lowerCaseWords[lowerCaseWords.length - 1] = capitalizeFirstLetter(lowerCaseWords[lowerCaseWords.length - 1]);
+  console.log('lowerCaseWords last array item: ', lowerCaseWords[lowerCaseWords.length - 1]);
+
+  // Join lowerCaseWords array to form the sentence output
+  let outPutText = lowerCaseWords.reverse().join(' ') + '!';
+  console.log('outPutText string:', outPutText);
 });
