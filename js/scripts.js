@@ -5,6 +5,11 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+//A function to change h2 text with a string
+function updateH2(string) {
+  $('div.output h2').text(string);
+}
+
 // User interface (or front-end) logic:
 
 // The submit event listener for form#sentence
@@ -35,4 +40,7 @@ $('form#sentence').submit(function(event) {
   // Join lowerCaseWords array to form the sentence output
   let outPutText = lowerCaseWords.reverse().join(' ') + '!';
   console.log('outPutText string:', outPutText);
+
+  updateH2(outPutText);
+  $('div.output').slideDown();
 });
