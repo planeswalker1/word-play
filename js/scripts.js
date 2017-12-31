@@ -16,6 +16,11 @@ function updateH2(string) {
 $('form#sentence').submit(function(event) {
   event.preventDefault();
 
+  if ($('input#input').val().length < 3) {
+    modifyH2('Try again!');
+    return $('div.output').slideDown();
+  }
+
   // A regular expression to split the sentence input
   let re = /[ ,.!?]+/;
 
