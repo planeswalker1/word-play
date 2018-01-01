@@ -49,3 +49,7 @@ $('form#sentence').submit(function(event) {
   updateH2(outPutText);
   $('div.output').slideDown();
 });
+
+$('input').focus(function() {
+  $('div.output').slideUp();
+});
